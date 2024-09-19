@@ -1,0 +1,108 @@
+
+        /*element selctor*/
+        h2
+        {
+             color:rgb(21, 255, 0);
+             text-align:center;
+             background-color:rgb(0, 0, 0);
+        }
+        /*Class selctor - assign with class*/
+        .mystyle
+        { 
+             color:brown;
+             text-align:center;
+             background-color:yellowgreen;
+         }
+
+         /*ID selctor - assign with id*/
+         #mymenu_style
+         {
+             color:white;
+             text-align:center;
+             background-color:blue;
+         }
+         /*apply on tables within the #box_table only*/
+         .box_table>table {
+            border-width: 1px;
+            border-style: solid;
+            border-color: red;
+            border-collapse: collapse;
+            width: 50%;
+         }
+
+         .box_table>table th, .box_table>table td{
+            border: 1px solid green;
+            padding: 5px;
+            text-align: center;
+         }
+
+         .box_table>table th {
+            background-color:lightgrey;
+         }
+
+         /*specifying different color for even rows*/
+         .box_table>table tr:nth-child(even){
+            background-color:beige;
+         }
+
+         .box_table>table tr:hover {
+            background-color: aqua;
+         }
+
+         @media (max-width: 640px){
+            body{
+                background-color: red;
+            }
+            h1 {
+                background-color: green;
+            }
+         }
+
+         @media (min-width: 641px) and (max-width: 768) {
+            body{
+                background-color: black;
+            }
+         }
+         @media (min-width:769px) {
+            body{
+                background-color: white;
+            }
+         }
+
+         @media print {
+            /* apply this rule only on print mediatyle.*/
+            .screen_only{
+                display:none;
+            }
+         }
+
+         body {
+            background-color: lightblue;
+        }
+
+         /* in line "style" takes precedance over all the other selectors*/
+
+
+         /* Phone screens (max-width: 600px) */
+@media screen and (max-width: 600px) {
+   #phone-message {
+       display: block;
+       color: green;
+   }
+}
+
+/* tablet screens (max-width: 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+   #tablet-message {
+       display: block;
+       color: blue;
+   }
+}
+
+/* laptop screens (min-width: 1025px) */
+@media screen and (min-width: 1025px) {
+   #laptop-message {
+       display: block;
+       color: red;
+   }
+}
